@@ -1,24 +1,13 @@
 var express = require('express');
 var router = express.Router();
-var _ = require('lodash');
 
 var bodyParser = require('body-parser');
 
-var originalBlocks = {
+var blocks = {
   'Fixed': 'Fastened securely in position',
   'Movable': 'Capable of being moved',
   'Rotating': 'Moving in a circle around its center'
 };
-
-var blocks = _.clone(originalBlocks);
-
-// For testing purposes. Visit this route
-// in order to reset back to default block values.
-var resetRoute = router.route('/reset');
-resetRoute.get(function(request, response) {
-  blocks = _.clone(originalBlocks);
-  response.redirect('/');
-});
 
 var parseUrlencoded = bodyParser.urlencoded({ extended: false });
 
