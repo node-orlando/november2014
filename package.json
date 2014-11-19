@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/node-orlando/november2014",
   "dependencies": {
-    "express": "^4.10.2"
+    "body-parser": "^1.9.2",
+    "express": "^4.10.2",
+    "lodash": "^2.4.1"
   }
 }
